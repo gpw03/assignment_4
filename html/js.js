@@ -14,6 +14,7 @@ document.getElementById('noteForm').addEventListener("submit", (ev) => {
     .then(response => response.json())
     .then(data => console.log(data.message))
     .catch(error => console.error("Note did not save: ", error));
+    document.getElementById('noteForm').reset();
 });
 
 document.getElementById('getNotes').addEventListener("click", () => {
@@ -41,6 +42,7 @@ document.getElementById('deleteNote').addEventListener("submit", (e) => {
     .then(data => console.log(data.message));
 
     document.getElementById('printedNotes').innerHTML = `<P>Click Show Notes to Refresh with updated notes</p>`;
+    document.getElementById('deleteNote').reset();
 });
 
 document.getElementById('updateNote').addEventListener("submit", (e) => {
@@ -57,5 +59,5 @@ document.getElementById('updateNote').addEventListener("submit", (e) => {
     .then(data => console.log(data.message));
 
     document.getElementById('printedNotes').innerHTML = `<P>Click Show Notes to Refresh with updated notes</p>`;
-    
+    document.getElementById('updateNote').reset();
 });
