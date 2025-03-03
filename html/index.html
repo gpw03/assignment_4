@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weird Notes App</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <h1>You must enter the correct key to see added notes: </h1>
+    <h2>KEY = 1234</h2>
+    <form id="noteForm">
+      <input type="text" id="key" name="key" placeholder="Enter Key">
+      <input type="text" id="title" name="title" placeholder="Title Your Note:">
+      <textarea id="note" name="note">Write your note here.</textarea>
+      <button type="submit">Save Note</button>
+    </form>
+    
+    <button id="getNotes">Show Notes</button>
+    <form id="deleteNote">
+      <input type="text" id="deleteID" placeholder="Enter a Notes ID to Delete">
+      <button type="submit">Delete</button>
+    </form>
+    <form id="updateNote">
+      <input type="text" id="noteID" name="noteID" placeholder="Enter the ID for the note you want to change.">
+      <input type="text" id="newTitle" name="newTitle" placeholder="Enter a new title.">
+      <input type="text" id="newNote" name="newNote" placeholder="Enter the updated note.">
+      <button type="submit">Update Note</button>
+    </form>
+    <script src="js.js"></script>
+    <section id="printedNotes"></section>
+  </body>
+</html>
