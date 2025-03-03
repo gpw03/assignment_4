@@ -7,7 +7,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <h1>You must enter the correct key to see added notes: </h1>
+    <h1>You must enter the correct key to add notes: </h1>
     <h2>KEY = 1234</h2>
     <form id="noteForm">
       <input type="text" id="key" name="key" placeholder="Enter Key" required>
@@ -16,7 +16,6 @@
       <button type="submit">Save Note</button>
     </form>
     
-    <button id="getNotes">Show Notes</button>
     <form id="deleteNote">
       <input type="text" id="deleteID" placeholder="Enter a Notes ID to Delete" required>
       <button type="submit">Delete</button>
@@ -27,7 +26,9 @@
       <input type="text" id="newNote" name="newNote" placeholder="Enter the updated note." required>
       <button type="submit">Update Note</button>
     </form>
-    <script src="js.js"></script>
+    <button id="getNotes">Show Notes</button>
+    <button id="hideNotes">Hide Notes</button>
     <section id="printedNotes"></section>
+    <script src="js.js"></script>
   </body>
 </html>

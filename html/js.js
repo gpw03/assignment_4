@@ -30,6 +30,11 @@ document.getElementById('getNotes').addEventListener("click", () => {
         .catch(error => console.error("Error fetching notes:", error));
 });
 
+// Clear Printed notes section on button press
+document.getElementById('hideNotes').addEventListener("click", () => {
+    document.getElementById('printedNotes').innerHTML = '';
+});
+
 document.getElementById('deleteNote').addEventListener("submit", (e) => {
     // Stop the form from doing regular form things
     e.preventDefault();
