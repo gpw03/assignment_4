@@ -1,0 +1,10 @@
+{
+  "adminUser": {
+    "password": "2df304e54e31eb195435aa8ada11643bcc17249e0a1ca43c71d3db3a0a19f252", 
+    "role": "admin"
+  },
+  "user1": {
+    "password": "a6f4bc13bfa1c625f556d03047cd97e2106ee7eb242e653b72b6d21b74c4db77",
+    "role": "author"
+  }
+}

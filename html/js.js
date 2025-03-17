@@ -10,8 +10,20 @@ document.getElementById('noteForm').addEventListener("submit", (ev) => {
     fetch ('/api', {
         method: "POST",
         body: JSON.stringify({ userKey, title, note}),
+        redirect: 'follow',
     })
-    .then(response => response.json())
+    .then(response => {
+        console.log(response);
+        if (response.status === 302) {
+            response.json().then(data => {
+                if (data.isAdmin) {
+                    window.location.href = "/admin.html";  // Redirect to the admin page
+                }
+            }); // Redirect to admin page
+        } else {
+            return response.json();  // Parse JSON response
+        }
+    })
     .then(data => console.log(data.message))
     .catch(error => console.error("Note did not save: ", error));
     document.getElementById('noteForm').reset();
@@ -66,3 +78,5 @@ document.getElementById('updateNote').addEventListener("submit", (e) => {
     document.getElementById('printedNotes').innerHTML = `<P>Click Show Notes to Refresh with updated notes</p>`;
     document.getElementById('updateNote').reset();
 });
+
+
